@@ -6,7 +6,7 @@
 
 **Prerequisites:**
 
-- Mongo needs Xcode 12.3 (if not on macOS just download Command Line Tools 12.3 beta)
+- Mongo needs Xcode 12.3 (or Command Line Tools 12.3 beta)
 
 **Install mongo:**
 
