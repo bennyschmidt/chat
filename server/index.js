@@ -25,15 +25,15 @@ mongo.connect(error => {
   */
 
   const store = require('./src/store')(db);
-  const api = require('./src/api')(socket, store);
+  const events = require('./src/events')(socket, store);
 
   /*
   Events
   */
 
   socket.on('connect', async connection => {
-    connection.on('message', api.onMessage);
-    api.onConnect(connection);
+    connection.on('message', events.onMessage);
+    events.onConnect(connection);
   });
 
   console.log(`PORT: ${PORT}`);
